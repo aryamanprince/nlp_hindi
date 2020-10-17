@@ -5,7 +5,7 @@ Setting up raspberry Pi:
 https://www.raspberrypi.org/downloads/raspberry-pi-os/ ([debian-buster] [recommended version])
   (August 2020 used)
 2. Flash using balenaEtcher/any other flashing software.
-3. Insert the SD Card into PC, open /boot folder, (SUPPRESS WINDOWS WARNINGS ELSE ISSUES MIGHT ARISE IN FUTURE) insert the files(ssh & wpa_supplicant.conf)  given in boot folder of this repo after editing wpa_supplicant.conf file.
+3. Insert the SD Card into PC, open /boot folder, (SUPPRESS WINDOWS WARNINGS ELSE ISSUES MIGHT ARISE IN FUTURE) insert the files(ssh & wpa_supplicant.conf)  given here: https://drive.google.com/drive/folders/1o876gj-mGMFaEAVKJAsYVoRnLtR4MB9f?usp=sharing. Do edit the wpa_supplicant.conf file.
 
 NOTE:
   If you have already booted Rpi for first time, (or changed wifi router) , it WILL have problems detecting new network, I followed this article to solve this problem:
