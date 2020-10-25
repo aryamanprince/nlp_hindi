@@ -19,7 +19,7 @@ sudo raspi-config  --> Interfacing --> VNC - SET TO ENABLE --> back to Advanced 
 NOTE:
 If anyone who doesn't have a pi can simply download VNC Viewer and ask me code, the work with this is similar to me doing on my laptop (same lags etc.)
 
-For installing pygobject use
+For installing pygobject use \
  sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0
  and then pip3 install pygobject
 
