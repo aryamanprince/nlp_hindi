@@ -1,5 +1,5 @@
 # nlp_hindi
-Project by ![Harshit Garg](https://www.linkedin.com/in/harshitgrg/), ![Pavnesh Chaturvedi]() ![Aryaman Singh]()
+Project by [Harshit Garg](https://www.linkedin.com/in/harshitgrg/), [Pavnesh Chaturvedi]() [Aryaman Singh]()
 The purpose of this project is to create a bot(A mannequin) that could provide a QnA interface for teachers(volunteer teacher actually) as well as students of a NGO-based school in jaipur. This mannequin is an RPi, students invoke it and ask questions, sort of like an assistant.
 The recurrent theme for this project is to make students aware about road-safety through interactive questions and answers, much like a digital assistant.
 
