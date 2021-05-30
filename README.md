@@ -1,4 +1,12 @@
 # nlp_hindi
+Project by ![Harshit Garg](https://www.linkedin.com/in/harshitgrg/), ![Pavnesh Chaturvedi]() ![Aryaman Singh]()
+The purpose of this project is to create a bot(A mannequin) that could provide a QnA interface for teachers(volunteer teacher actually) as well as students of a NGO-based school in jaipur. This mannequin is an RPi, students invoke it and ask questions, sort of like an assistant.
+The recurrent theme for this project is to make students aware about road-safety through interactive questions and answers, much like a digital assistant.
+
+Languages currently supported, Hindi, English. 
+Coming to what it does, we invoke it using snowboy, calling, google stt, then we make a vector, in N Dimensional space, calculating, the cosines' (all shadows) and then finally returning the one with high priority, letting the bot speak using tts.
+
+Installation:
 
 Setting up raspberry Pi:
 1. Get the image:
@@ -25,3 +33,10 @@ For installing pygobject use \
 
 
 link for model https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.hi.300.vec.gz
+
+Example:
+1. 
+
+Major work to do:
+1. Make Hindi Model faster.
+2. Train a model so that it works offline too.
