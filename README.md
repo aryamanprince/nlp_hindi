@@ -1,5 +1,5 @@
 # nlp_hindi
-Project by [Harshit Garg](https://www.linkedin.com/in/harshitgrg/), [Pavnesh Chaturvedi]() [Aryaman Singh]()
+Project by [Harshit Garg](https://www.linkedin.com/in/harshitgrg/), [Pavnesh Chaturvedi](https://github.com/pc-beast) [Aryaman Singh](https://github.com/aryamanprince)
 The purpose of this project is to create a bot(A mannequin) that could provide a QnA interface for teachers(volunteer teacher actually) as well as students of a NGO-based school in jaipur. This mannequin is an RPi, students invoke it and ask questions, sort of like an assistant.
 The recurrent theme for this project is to make students aware about road-safety through interactive questions and answers, much like a digital assistant.
 
@@ -13,30 +13,28 @@ Setting up raspberry Pi:
 https://www.raspberrypi.org/downloads/raspberry-pi-os/ ([debian-buster] [recommended version])
   (August 2020 used)
 2. Flash using balenaEtcher/any other flashing software.
-3. Insert the SD Card into PC, open /boot folder, (SUPPRESS WINDOWS WARNINGS ELSE ISSUES MIGHT ARISE IN FUTURE) insert the files(ssh & wpa_supplicant.conf)  given here: https://drive.google.com/drive/folders/1o876gj-mGMFaEAVKJAsYVoRnLtR4MB9f?usp=sharing. Do edit the wpa_supplicant.conf file.
+3. Insert the SD Card into PC, open /boot folder, (SUPPRESS WINDOWS WARNINGS ELSE ISSUES MIGHT ARISE IN FUTURE) insert the files(ssh & wpa_supplicant.conf)  given here: https://drive.google.com/drive/folders/1o876gj-mGMFaEAVKJAsYVoRnLtR4MB9f?usp=sharing. It is preferable to edit the wpa_supplicant.conf file.
 
 NOTE:
-  If you have already booted Rpi for first time, (or changed wifi router) , it WILL have problems detecting new network, I followed this article to solve this problem:
+  If the RPI has already been booted for first time, or WI-Fi network is different, it WILL have problems detecting new network, this article can be followed to solve this problem:
   https://www.raspberrypi.org/forums/viewtopic.php?t=266724.
 
-4. Install puTTy, Advanced IP scanner, scan IP Address , then paste this address to puTTY, start the terminal using puTTy, (use id:pi, pass: gr8there) or (use id:pi, pass: gr8there)
+4. Install puTTy, Advanced IP scanner, scan IP Address , then paste this address to puTTY, start the terminal using puTTy, (use id:pi, pass: gr8there) or (use id:pi, pass: gr8there) //for current Rpi 
 5. If booting for first time, configure few settings by:
-sudo raspi-config  --> Interfacing --> VNC - SET TO ENABLE --> back to Advanced options --> set a resolution suitable for you,(I HAD SOME PROBLEMS here, so be careful,  some high resolution MSI monitor issue) --feel free to check resolution.
-6. Install VNC, paste IP address. I'd Password same as above. (abhi k liye, in general later.)
+sudo raspi-config  --> Interfacing --> VNC - SET TO ENABLE --> back to Advanced options --> set a resolution suitable -->feel free to check resolution. 
+6. Install VNC, paste IP address. I'd Password same as above.
 
 NOTE:
-If anyone who doesn't have a pi can simply download VNC Viewer and ask me code, the work with this is similar to me doing on my laptop (same lags etc.)
-
-For installing pygobject use \
+1. If anyone who doesn't have a pi can simply download VNC Viewer and ask me code, the work with this is similar to me doing on my laptop (same lags etc.)
+2. For installing pygobject use \
  sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0 \
  and then pip3 install pygobject
 
 
-link for model https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.hi.300.vec.gz
-
-Example:
-1. 
-
+Link for model: https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.hi.300.vec.gz
+Example I/O
+1. Input: https://drive.google.com/file/d/1SJ75hsULpJvtQP5kkDVL5sjlzcaENEo6/view?usp=sharing
+2. Output: https://drive.google.com/file/d/12vg56LSSY-A_tg8XTkms27GXRuQffXqh/view?usp=sharing
 Major work to do:
 1. Make Hindi Model faster.
 2. Train a model so that it works offline too.
