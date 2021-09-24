@@ -32,9 +32,14 @@ NOTE:
 
 
 Link for model: https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.hi.300.vec.gz
+![image](https://user-images.githubusercontent.com/56971013/134643812-64d1b618-d3b8-4774-bead-74c359ae899f.png)
+![image](https://user-images.githubusercontent.com/56971013/134643894-19b584ed-8339-4a00-89fc-538de00a1fa2.png)
+
 Example I/O
 1. Input: https://drive.google.com/file/d/1SJ75hsULpJvtQP5kkDVL5sjlzcaENEo6/view?usp=sharing
 2. Output: https://drive.google.com/file/d/12vg56LSSY-A_tg8XTkms27GXRuQffXqh/view?usp=sharing
+
 Major work to do:
+
 1. Make Hindi Model faster.
 2. Train a model so that it works offline too.
