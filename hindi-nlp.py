@@ -26,12 +26,12 @@ def interrupt_callback():
     global interrupted
     return interrupted
 
-if len(sys.argv) == 1:
-    print("Error: need to specify model name")
-    print("Usage: python3 demo.py your.model")
-    sys.exit(-1)
+# if len(sys.argv) == 1:
+#     print("Error: need to specify model name")
+#     print("Usage: python3 demo.py your.model")
+#     sys.exit(-1)
 
-model = sys.argv[1]
+model = "snowboy.umdl"
 
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
@@ -39,7 +39,7 @@ signal.signal(signal.SIGINT, signal_handler)
 detector = snowboydecoder.HotwordDetector(model, sensitivity=1)
 print('Listening... Press Ctrl+C to exit')
 
-engine = pyttsx3.init()
+engine = pyttsx3.init("espeak")
 engine.setProperty('voice', 'english+f2')
 engine.setProperty('rate', 110)
 
@@ -52,6 +52,7 @@ for q,a in data.items():
     answers.append(a)
 
 model = gensim.models.KeyedVectors.load_word2vec_format('cc.hi.300.vec',limit=20000) 
+print("1")
 # model = gensim.models.fasttext.load_facebook_vectors('cc.hi.300.bin', encoding='utf-8')
 def stt():
     r = sr.Recognizer()
@@ -91,7 +92,7 @@ def sentenceDistance(inputSpeech):
     mindist = 1000
     min = 0
     for i in range(len(questions)):
-        distance = model.wmdistance(question[i], inputSpeech)
+        distance = model.wmdistance(questions[i], inputSpeech)
         if(distance < mindist):
             min = i
             mindist = distance
@@ -111,6 +112,7 @@ def tts(outputSpeech):
 
 
 index2word_set = set(model.wv.index2word)
+print("2")
 def avg_feature_vector(sentence, model, num_features, index2word_set):
     words = sentence.split()
     feature_vec = np.zeros((num_features, ), dtype='float32')
@@ -144,7 +146,7 @@ def calculateInitialQuestions():
         quesVector.append(avg_feature_vector(ques, model=model, num_features=300, index2word_set=index2word_set))
 
 calculateInitialQuestions()
-
+print("3")
 def fun():
       snowboydecoder.play_audio_file()
       try:
@@ -158,7 +160,7 @@ def fun():
           sys.exit(0)
 
       except (OSError, RuntimeError) as err:
-          print("AN ERROR OCCURED!!")
+          print("AN ERROR OCCURED!! ", err)
 
       except sr.UnknownValueError:
           print("Speech Recognition could not understand audio")
@@ -172,7 +174,6 @@ def fun():
 
 # main loop
 
-engine.say("powered on")
 #engine.runAndWait()
 for i in range(0,100):
       while True:
